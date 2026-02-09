@@ -1,0 +1,381 @@
+/* Footer.css */
+
+.funtraev-footer {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background: linear-gradient(135deg, #FF6B1A 0%, #D4AF37 50%, #16FE25 100%);
+  padding: 25px 0 15px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-top: auto;
+  transition: all 0.4s ease;
+}
+
+.funtraev-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,107,26,0.85) 0%, rgba(255, 210, 60, 0.85) 50%, rgba(22,254,37,0.85) 100%);
+  z-index: 1;
+  transition: all 0.4s ease;
+}
+
+/* ========== MODO OSCURO ========== */
+
+.funtraev-footer.dark-mode {
+  background: #0f172a;
+}
+
+.funtraev-footer.dark-mode::before {
+  background: #1f2937f2;
+}
+
+.funtraev-footer.dark-mode .funtraev-brand-name {
+  background: linear-gradient(90deg, #FF6B1A 0%, #D4AF37 50%, #16FE25 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text
+}
+
+.funtraev-footer.dark-mode .funtraev-logo-img {
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4)) drop-shadow(0 2px 8px rgba(0,0,0,0.6));
+}
+
+.funtraev-footer.dark-mode .funtraev-service-link {
+  color: #e0e0e0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+.funtraev-footer.dark-mode .funtraev-service-link::after {
+  background: #16FE25;
+}
+
+.funtraev-footer.dark-mode .funtraev-service-link:hover {
+  color: #16FE25;
+}
+
+.funtraev-footer.dark-mode .funtraev-copyright-container {
+  border-top: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.funtraev-footer.dark-mode .funtraev-copyright {
+  color: #b0b0b0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+/* Ajustes para redes sociales en modo oscuro */
+.funtraev-footer.dark-mode .funtraev-social-link {
+  box-shadow: 0 3px 10px rgba(0,0,0,0.6);
+}
+
+.funtraev-footer.dark-mode .funtraev-social-link.whatsapp:hover {
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.7);
+}
+
+.funtraev-footer.dark-mode .funtraev-social-link.facebook:hover {
+  box-shadow: 0 6px 18px rgba(24, 119, 242, 0.7);
+}
+
+.funtraev-footer.dark-mode .funtraev-social-link.instagram:hover {
+  box-shadow: 0 6px 18px rgba(221, 42, 123, 0.7);
+}
+
+/* ========== RESTO DEL CSS ORIGINAL ========== */
+
+.funtraev-footer-content {
+  width: 100%;
+  max-width: 1400px;
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  padding: 0 40px;
+  gap: 20px;
+}
+
+/* ========== COLUMNA IZQUIERDA - LOGO ========== */
+
+.funtraev-footer-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.funtraev-brand-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.funtraev-logo-img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.4s ease;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+}
+
+.funtraev-logo-img:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.funtraev-brand-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  letter-spacing: 1.5px;
+  margin: 0;
+  padding: 0;
+  transition: all 0.4s ease;
+  font-family: 'Libre Baskerville', serif;
+}
+
+/* ========== COLUMNA CENTRO - REDES SOCIALES ========== */
+
+.funtraev-footer-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.funtraev-social-links {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+}
+
+.funtraev-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+.funtraev-social-link svg {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+/* Colores específicos de cada red social */
+.funtraev-social-link.whatsapp {
+  background: #25D366;
+}
+
+.funtraev-social-link.whatsapp:hover {
+  background: #20bd5a;
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.5);
+}
+
+.funtraev-social-link.facebook {
+  background: #1877F2;
+}
+
+.funtraev-social-link.facebook:hover {
+  background: #0d65d9;
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 6px 18px rgba(24, 119, 242, 0.5);
+}
+
+.funtraev-social-link.instagram {
+  background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF);
+}
+
+.funtraev-social-link.instagram:hover {
+  background: linear-gradient(45deg, #e07520, #c91f6b, #6e2a96);
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 6px 18px rgba(221, 42, 123, 0.5);
+}
+
+.funtraev-social-link.twitter {
+  background: #000000;
+}
+
+.funtraev-social-link.twitter:hover {
+  background: #1a1a1a;
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+/* ========== COLUMNA DERECHA - LINKS DE SERVICIOS ========== */
+
+.funtraev-footer-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.funtraev-service-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  font-family: 'Karla', sans-serif;
+}
+
+.funtraev-service-link {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.funtraev-service-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.funtraev-service-link:hover {
+  transform: translateY(-2px);
+}
+
+.funtraev-service-link:hover::after {
+  width: 100%;
+}
+
+/* ========== COPYRIGHT ========== */
+
+.funtraev-copyright-container {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  margin-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 12px;
+  transition: all 0.4s ease;
+}
+
+.funtraev-copyright {
+  color: white;
+  font-size: 0.75rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  font-weight: 400;
+  transition: all 0.4s ease;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 968px) {
+  .funtraev-footer-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0 20px;
+  }
+
+  .funtraev-footer-left,
+  .funtraev-footer-center,
+  .funtraev-footer-right {
+    justify-content: center;
+  }
+
+  .funtraev-service-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .funtraev-footer {
+    padding: 22px 0 15px 0;
+  }
+
+  .funtraev-brand-name {
+    font-size: 1.6rem;
+  }
+
+  .funtraev-logo-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .funtraev-social-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .funtraev-social-link svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .funtraev-social-links {
+    gap: 15px;
+  }
+
+  .funtraev-service-link {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .funtraev-footer {
+    padding: 20px 0 12px 0;
+  }
+
+  .funtraev-brand-name {
+    font-size: 1.4rem;
+  }
+
+  .funtraev-logo-img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .funtraev-social-link {
+    width: 38px;
+    height: 38px;
+  }
+
+  .funtraev-social-link svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .funtraev-social-links {
+    gap: 13px;
+  }
+
+  .funtraev-service-links {
+    gap: 15px;
+  }
+
+  .funtraev-service-link {
+    font-size: 0.85rem;
+  }
+
+  .funtraev-copyright {
+    font-size: 0.65rem;
+  }
+}
